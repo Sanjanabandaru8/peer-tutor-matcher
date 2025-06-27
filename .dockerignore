@@ -1,0 +1,28 @@
+# Ignore Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Ignore version control directories
+.git/
+.gitignore
+
+# Ignore development tools configs (optional)
+.vscode/
+.idea/
+
+# Ignore logs and temp files
+*.log
+*.tmp
+*.DS_Store
+
+# Ignore model logs/checkpoints (optional, depending on your workflow)
+checkpoints/
+runs/

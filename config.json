@@ -1,0 +1,18 @@
+{
+    "model_threshold": 0.7,
+    "max_results": 3,
+    "max_inactive_days": 14,
+    "karma_threshold": 70,
+    "num_samples": 800,
+    "split_sizes": {
+        "train": 500,
+        "test": 200,
+        "val": 100 },
+    "train_path": "data/splits/train.json",
+    "test_path": "data/splits/test.json",
+    "val_path": "data/splits/val.json",
+    "model_output_path": "model/model.pkl",
+    "random_seed": 42,
+    "n_estimators": 100,
+    "max_depth": 5
+}

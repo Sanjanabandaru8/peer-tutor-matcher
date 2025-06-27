@@ -26,12 +26,17 @@ Features:
 
 Project Structure:
 
-.
-├── Dockerfile                     - Docker container setup
-
 ├── .dockerignore                  - Excluded files for clean builds
 
+├── Dockerfile                     - Docker container setup
+
+├── README.md                      - Documentation
+
+├── api_test_match                 - sample match test
+
 ├── config.json                    - Matching rules & model settings
+
+├── feature_set.json               - Extracted feature set (optional)
 
 ├── main.py                        - FastAPI application
 
@@ -39,15 +44,13 @@ Project Structure:
 
 ├── model.pkl                      - Pre-trained ML model
 
-├── students.json                  - Peer tutor dataset (simulated)
-
-├── feature_set.json               - Extracted feature set (optional)
-
-├── student_dataset.py             - Script to regenerate demo dataset
-
 ├── requirements.txt               - Python dependencies
 
-└── README.md                      - Documentation
+├── studentsdata.py             - Script to regenerate demo dataset
+
+└── students.json                  - Peer tutor dataset (simulated)
+
+
 
 
 Prerequisites:

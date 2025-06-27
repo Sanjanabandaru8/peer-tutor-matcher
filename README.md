@@ -26,13 +26,19 @@ Features:
 
 Project Structure:
 
+├──data
+   ├──  students.json                  - Peer tutor dataset (simulated)
+
+├──model
+   ├──model.pkl                      - Pre-trained ML model
+
 ├── .dockerignore                  - Excluded files for clean builds
 
 ├── Dockerfile                     - Docker container setup
 
 ├── README.md                      - Documentation
 
-├── api_test_match                 - sample match test
+├── api_test_match.p               - sample match test
 
 ├── config.json                    - Matching rules & model settings
 
@@ -42,13 +48,11 @@ Project Structure:
 
 ├── matcher.py                     - Tutor matching logic
 
-├── model.pkl                      - Pre-trained ML model
-
 ├── requirements.txt               - Python dependencies
 
-├── studentsdata.py             - Script to regenerate demo dataset
+└── studentsdata.py             - Script to regenerate demo dataset
 
-└── students.json                  - Peer tutor dataset (simulated)
+ 
 
 
 

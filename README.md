@@ -64,7 +64,7 @@ Setup & Usage:
 
 1. Clone the Repo
 
-          git clone https://github.com/your-username/peer-tutor-matcher.git
+          git clone https://github.com/Sanjanabandaru8/peer-tutor-matcher.git
 
           cd peer-tutor-matcher
 

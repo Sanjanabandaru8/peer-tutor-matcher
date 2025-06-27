@@ -1,7 +1,9 @@
-Peer Tutor Matcher
+#Peer Tutor Matcher
+
 Peer Tutor Microservice is a project that I did as an intern at Turtil.co. It is a configurable, machine-learning-based system to match students with suitable peer tutors. Built with FastAPI, Scikit-learn, and containerized via Docker, this project uses simulated datasets for testing and demonstration. It predicts and ranks peer tutors in real time using RandomForestClassifier.
 
-Features
+#Features
+
 ->Intelligent peer tutor matching based on:
 
 Tutor's karma points in requested topic
@@ -19,9 +21,8 @@ Machine learning probability score
 ->Docker-ready deployment
 -> Dataset auto-regeneration with fresh timestamps
 
-Project Structure
-plaintext
-Copy code
+#Project Structure
+
 .
 ├── Dockerfile                # Docker container setup
 ├── .dockerignore             # Excluded files for clean builds
@@ -35,12 +36,13 @@ Copy code
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Documentation
 
-⚙️ Prerequisites
-Python 3.12+
+#Prerequisites
 
+Python 3.12+
 Docker (optional, for containerized deployment)
 
-Setup & Usage
+#Setup & Usage
+
 1. Clone the Repo
 
 git clone https://github.com/your-username/peer-tutor-matcher.git
@@ -65,22 +67,24 @@ API accessible at:
 
 http://127.0.0.1:8000
 
-Docker Deployment
+#Docker Deployment
+
 Build the Image:
 
 docker build -t peer-tutor-matcher .
+
 Run the Container:
 
 docker run -d -p 8000:8000 peer-tutor-matcher
 
-API Endpoints
-Method	Endpoint	Description
-GET	/	Welcome message
-GET	/status	Health check
-GET	/peers	Total available peer tutors
-POST	/match-peer-tutors	Recommend suitable peer tutors
+#API Endpoints
 
-Example Match Request
+GET	/	Welcome -message
+GET	/status	-Health check
+GET	/peers	-Total available peer tutors
+POST	/match-peer-tutors	-Recommend suitable peer tutors
+
+#Example Match Request
 
 {
   "user_id": "stu_9202",
@@ -89,12 +93,13 @@ Example Match Request
   "branch": "IT",
   "year": 2
 }
-Example Response
+
+#Example Response
 
 {
   "user_id": "stu_9202",
   "matched_peers": [
-    {
+{
       "peer_id": "stu_2409",
       "name": "Aarav P",
       "college": "CVR College of Engineering",
@@ -126,8 +131,8 @@ Example Response
 }
 
 
+#Simulated Dataset Details
 
-Simulated Dataset Details
 students.json contains generated peer tutor profiles
 
 Use student_dataset.py to regenerate this file with:
@@ -140,13 +145,15 @@ Recent last_helped_on dates respecting max_inactive_days
 
 This keeps test results relevant and prevents stale data.
 
-Notes
+#Notes
+
 All datasets are simulated — no real personal data used
 
 Logs such as features_log.csv generated during runtime for debugging
 
 
-Technologies Used
+#Technologies Used
+
 FastAPI 
 Scikit-learn 
 Pandas 

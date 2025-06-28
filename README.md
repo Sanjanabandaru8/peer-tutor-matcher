@@ -1,8 +1,12 @@
 Peer Tutor Matcher
 
+
+
 Peer Tutor Microservice is a project that I did as an intern at Turtil.co. It is a configurable, machine-learning-based system to match students with suitable peer tutors. Built with FastAPI, Scikit-learn, and containerized via Docker, this project uses simulated datasets for testing and demonstration. It predicts and ranks peer tutors in real time using RandomForestClassifier.
 
+
 Features:
+
 
 ->Intelligent peer tutor matching based on:
 
@@ -24,7 +28,9 @@ Features:
 
 -> Dataset auto-regeneration with fresh timestamps
 
+
 Project Structure:
+
 
 ├──data
    ├──  students.json                  - Peer tutor dataset (simulated)
@@ -59,12 +65,14 @@ Project Structure:
 
 Prerequisites:
 
+
 -> Python 3.12+
 
 -> Docker (optional, for containerized deployment)
 
 
 Setup & Usage:
+
 
 1. Clone the Repo
 
@@ -94,6 +102,7 @@ Setup & Usage:
 
 Docker Deployment:
 
+
 Build the Image:-
 
      docker build -t peer-tutor-matcher .
@@ -102,9 +111,11 @@ Run the Container:-
 
      docker run -d -p 8000:8000 peer-tutor-matcher
 
+
 API Endpoints:
 
-GET	/	Welcome -message
+
+GET	/	-Welcome message
 
 GET	/status	-Health check
 
@@ -112,7 +123,9 @@ GET	/peers	-Total available peer tutors
 
 POST	/match-peer-tutors	-Recommend suitable peer tutors
 
+
 Example Match Request:
+
 
      {
        "user_id": "stu_9202",
@@ -122,7 +135,9 @@ Example Match Request:
        "year": 2
      }
 
+
 Example Response:
+
 
      {
        "user_id": "stu_9202",
@@ -159,7 +174,18 @@ Example Response:
      }
 
 
+Testing with api_test_match:
+
+
+Open a new terminal while keeping the API running, and run:
+
+     python api_test_match.py
+
+This should return a response similiar to the example response mentioned above.
+
+
 Simulated Dataset Details:
+
 
 ->students.json contains generated peer tutor profiles
 
@@ -173,7 +199,9 @@ Simulated Dataset Details:
 
   This keeps test results relevant and prevents stale data.
 
+
 Notes:
+
 
 ->All datasets are simulated — no real personal data used
 
@@ -181,6 +209,7 @@ Notes:
 
 
 Technologies Used:
+
 
 ->FastAPI
 
@@ -195,3 +224,8 @@ Technologies Used:
 ->Joblib
 
 ->Python 3.12 
+
+
+Author:
+
+Bandaru Satya Lakshmi Sanjana
